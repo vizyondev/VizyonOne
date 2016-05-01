@@ -1,0 +1,8 @@
+
+// 04-28-16 
+// Signed up for Outlook, GitHub, Twitter
+// Changed pink color on the buttons
+// Tried global button styling, but failed
+
+// Added 10k records to the "PeopleView"
+// 

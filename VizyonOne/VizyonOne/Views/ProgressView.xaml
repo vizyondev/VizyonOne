@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:Views="clr-namespace:VizyonOne.Views;assembly=VizyonOne"
+              xmlns:ViewModels="clr-namespace:VizyonOne.ViewModels;assembly=VizyonOne"
+              x:Class="VizyonOne.Views.ProgressView" Title="{Binding Title}">
+
+  <!-- BINDING -->
+  <ContentPage.BindingContext>
+    <ViewModels:ProgressViewModel />
+  </ContentPage.BindingContext>
+
+  <!-- STYLE -->
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <!-- Scroll View -->
+      <Style TargetType="ScrollView">
+        <Setter Property="BackgroundColor" Value="Black" />
+      </Style>
+      <!-- StackLayout -->
+      <Style TargetType="StackLayout">
+        <Setter Property="Padding" Value="5,5,5,5" />
+        <Setter Property="Spacing" Value="5" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+      
+      <Entry Text="{Binding EmailAddress}" />
+      <ListView ItemsSource="{Binding People}" RowHeight="150">
+        <ListView.Header>
+          <StackLayout>
+            <Label Text="{Binding Header}"  FontSize="Large" TextColor="#FF72D6" />
+            <Label Text="Email:" />
+          </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout>
+                <Label Text="{Binding Name}" />
+                <Label Text="{Binding Password}" />
+                <Label Text="{Binding Title}" />
+                <Label Text="{Binding AddressStreet}" />
+                <Label Text="{Binding AddressCity}" />
+                <Label Text="{Binding AddressState}" />
+                <Label Text="{Binding AddressZip}" />
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Footer>
+          <StackLayout>
+            <Button Text="Save" Command="{Binding SavePersonCommand}" IsEnabled="{Binding IsNotBusy}" />      
+          </StackLayout>
+        </ListView.Footer>
+      </ListView>
+
+      
+</ContentPage>

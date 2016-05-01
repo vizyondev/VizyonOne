@@ -1,0 +1,18 @@
+﻿1>------ Build started: Project: VizyonOne, Configuration: Debug Any CPU ------
+1>C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne\ViewModels\ProgressViewModel.cs(59,18,59,28): warning CS0169: The field 'ProgressViewModel._isNotBusy' is never used
+1>C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne\ViewModels\LoginViewModel.cs(68,22,68,32): warning CS0169: The field 'LoginViewModel._isNotBusy' is never used
+1>C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne\ViewModels\PeopleViewModel.cs(63,22,63,32): warning CS0169: The field 'PeopleViewModel._isNotBusy' is never used
+1>  VizyonOne -> C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne\bin\Debug\VizyonOne.dll
+2>------ Build started: Project: VizyonOne.Droid, Configuration: Debug Any CPU ------
+2>C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne.Droid\obj\Debug\res\drawable-hdpi\vizyon_logo.png : libpng warning : iCCP: Not recognizing known sRGB profile that has been edited
+2>C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne.Droid\obj\Debug\res\drawable\vizyon_icon.png : libpng warning : iCCP: Not recognizing known sRGB profile that has been edited
+2>C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne.Droid\obj\Debug\res\drawable-xhdpi\vizyon_logo.png : libpng warning : iCCP: Not recognizing known sRGB profile that has been edited
+2>C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne.Droid\obj\Debug\res\drawable-xxhdpi\vizyon_logo.png : libpng warning : iCCP: Not recognizing known sRGB profile that has been edited
+2>  VizyonOne.Droid -> C:\Users\PC HEALIN\documents\visual studio 2015\Projects\VizyonOne\VizyonOne\VizyonOne.Droid\bin\Debug\VizyonOne.Droid.dll
+3>Starting deploy Samsung SM-N900 ...
+3>Deploying Samsung SM-N900 ...
+3>Build started.
+3>Build succeeded.
+3>Deploy successfully on Samsung SM-N900
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Deploy: 1 succeeded, 0 failed, 0 skipped ==========

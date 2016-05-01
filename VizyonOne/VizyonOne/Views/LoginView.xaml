@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:ViewModels="clr-namespace:VizyonOne.ViewModels;assembly=VizyonOne"
+              x:Class="VizyonOne.Views.LoginView" Title="{Binding Title}">
+  
+  <!-- BINDING -->
+  <ContentPage.BindingContext>
+    <ViewModels:LoginViewModel />
+  </ContentPage.BindingContext>
+
+  <!-- STYLE -->
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <!-- Scroll View -->
+      <Style TargetType="ScrollView">
+        <Setter Property="BackgroundColor" Value="Black" />
+      </Style>
+      <!-- StackLayout -->
+      <Style TargetType="StackLayout">
+        <Setter Property="Padding" Value="5,5,5,5" />
+        <Setter Property="Spacing" Value="5" />
+      </Style>
+      <!-- Label -->
+      <Style TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="White" />
+      </Style>
+      <!-- Entry / Input Field -->
+      <Style TargetType="Entry">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="WidthRequest" Value="300" />
+        <Setter Property="BackgroundColor" Value="#FFB6C1" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="White" />
+      </Style>
+      <!-- Switch -->
+      <Style TargetType="Switch">
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="IsEnabled" Value="False" />
+      </Style>
+      <!-- Button -->
+      <Style TargetType="Button">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="BorderColor" Value="Gray" />
+        <Setter Property="BorderRadius" Value="7" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="WidthRequest" Value="300" />
+        <Setter Property="BackgroundColor" Value="#FF72D6" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="White" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+<ScrollView>
+  
+    <StackLayout>
+      <Label Text="{Binding Header}" FontSize="Large" TextColor="#FF72D6"/>
+  
+      <Label Text="Email:" />
+      <Entry Text="{Binding EmailAddress}" />
+      <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="#FF1493"/>
+      <Label Text="Password:" />
+      <Entry Text="{Binding Password}" IsPassword="true"  />
+    
+      <Button Text="Say Hello" Command="{Binding SayHelloCommand}" />
+      <Button Text="Generate Widget" Command="{Binding GetWidgetCommand}" IsEnabled="{Binding IsNotBusy}" />
+      <Label Text="{Binding Version}" HorizontalOptions="Start" VerticalOptions="End"/>
+    </StackLayout>
+
+</ScrollView>
+
+</ContentPage>
